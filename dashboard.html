@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Dados Criminais - São Paulo</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dashboard de Dados Criminais - São Paulo</h1>
+            <p>Visualização interativa dos dados de ocorrências criminais</p>
+        </header>
+
+        <div class="stats-overview">
+            <div class="stat-card">
+                <h3>Total de Ocorrências</h3>
+                <p class="stat-number" id="totalCrimes">-</p>
+            </div>
+            <div class="stat-card">
+                <h3>Tipos de Crime</h3>
+                <p class="stat-number" id="crimeTypes">-</p>
+            </div>
+            <div class="stat-card">
+                <h3>Bairros Afetados</h3>
+                <p class="stat-number" id="neighborhoods">-</p>
+            </div>
+            <div class="stat-card">
+                <h3>Período dos Dados</h3>
+                <p class="stat-number" id="datePeriod">2024-2025</p>
+            </div>
+        </div>
+
+        <div class="charts-grid">
+            <div class="chart-container">
+                <h2>Principais Tipos de Crime</h2>
+                <canvas id="crimeTypesChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <h2>Tendência Mensal de Crimes</h2>
+                <canvas id="monthlyTrendsChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <h2>Top 10 Bairros com Mais Ocorrências</h2>
+                <canvas id="neighborhoodsChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <h2>Distribuição por Categoria</h2>
+                <canvas id="categoryChart"></canvas>
+            </div>
+        </div>
+
+        <div class="details-section">
+            <h2>Detalhes por Tipo de Crime</h2>
+            <div class="crime-details" id="crimeDetails">
+                <!-- Details will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
